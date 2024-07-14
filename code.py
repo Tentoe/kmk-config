@@ -63,13 +63,12 @@ SPC_L5 = KC.LT(5, KC.SPACE)  # pyright: ignore
 # ESC_L6 = KC.LT(6, KC.ESC)
 
 combos.combos = [
-    # Chord((KC.BSPC, KC.ENT), KC.DEL),
-    Chord((15, 16), KC.N, match_coord=True),
-    Chord((30, 32), KC.ESC, match_coord=True),
+    Chord((15, 16), KC.LT(1, KC.DEL), match_coord=True),  # pyright: ignore
+    Chord((30, 32), KC.LT(6, KC.ESC), match_coord=True),  # pyright: ignore
 ]
 
-# _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 # fmt: off
+      # _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
 keyboard.keymap = [
     [  # QWERTY
         KC.Q,    KC.W,    KC.E,    KC.R,    KC.T,    KC.Y,    KC.U,    KC.I,    KC.O,    KC.P,
@@ -77,16 +76,16 @@ keyboard.keymap = [
         KC.Z,    KC.X,    KC.C,    KC.V,    KC.B,    KC.N,    KC.M,    KC.COMM, KC.DOT,  KC.SLSH,
                                    BSPC_L2, ENT_L3,  TAB_L4,  SPC_L5,
     ],
-    [  # MOUSE
-        _______,   _______, _______,   _______, _______, _______, KC.MB_LMB, KC.MW_UP, KC.MB_LMB,  _______,
-        _______, KC.MB_RMB, _______, KC.MB_LMB, _______, _______,  KC.MS_LT, KC.MS_DN,  KC.MS_UP, KC.MS_RT,
-        _______,   _______, _______,   _______, _______, _______,   _______, KC.MW_DN,   _______,  _______,
-                                       _______, _______, _______, _______,
+    [  # Funcion
+        _______, _______, _______, _______, _______, KC.PSCR,   KC.F7,   KC.F8,   KC.F9,  KC.F12,
+        _______, _______, _______, _______, _______, KC.SLCK,   KC.F4,   KC.F5,   KC.F6,  KC.F11,
+        _______, _______, _______, _______, _______, KC.PAUS,   KC.F1,   KC.F2,   KC.F3,  KC.F10,
+                                   _______, _______, _______, _______,
     ],
-    [  # NAVIGATION
-        _______, _______, KC.PGUP, _______, _______, _______, _______, _______, _______, _______,
-        KC.LEFT,   KC.UP, KC.DOWN, KC.RGHT, _______, _______, KC.LGUI, _______,  KC.MEH, KC.HYPR,
-        _______, KC.HOME, KC.PGDN,  KC.END, _______, _______, _______, _______, _______, _______,
+    [  # Numbers
+        _______, _______, _______, _______, _______, KC.LBRC,    KC.7,    KC.8,    KC.9, KC.RBRC,
+        _______, _______, _______, _______, _______,  KC.EQL,    KC.4,    KC.5,    KC.6, KC.SCLN,
+        _______, _______, _______, _______, _______, KC.BSLS,    KC.1,    KC.2,    KC.3,  KC.GRV,
                                    _______, _______, _______, _______,
     ],
     [  # RIGHT SYMBOLS
